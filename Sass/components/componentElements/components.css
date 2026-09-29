@@ -1,0 +1,185 @@
+.container {
+  margin: auto;
+  width: calc(100% - 40px);
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    /*this is for Laptop*/
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    /*this is for Computer*/
+    max-width: 1200px;
+  }
+}
+
+i.up-button {
+  z-index: 9999;
+  position: fixed;
+  cursor: pointer;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: 0.5s;
+  width: 40px;
+  height: 40px;
+  right: -40px;
+  bottom: 40px;
+}
+i.up-button.active-up-button {
+  right: 20px;
+}
+i.up-button {
+  background-color: #a21590;
+  color: #fff;
+}
+
+.btn {
+  display: inline-block;
+  position: relative;
+  padding: 15px 30px;
+  border-radius: 20px;
+  transition: 0.5s;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #4a0d42;
+  color: white;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  background-color: #5c074f;
+}
+
+.section-title {
+  font-size: 70px;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+  color: #f1d28d;
+  font-family: "Allura", cursive;
+  text-transform: capitalize;
+}
+@media (max-width: 767px) {
+  .section-title {
+    /*this is for Phone*/
+    font-size: 40px;
+  }
+}
+
+.section-info {
+  font-size: 80px;
+  font-weight: 700;
+  font-family: "DM Sans", sans-serif;
+}
+@media (max-width: 767px) {
+  .section-info {
+    /*this is for Phone*/
+    font-size: 60px;
+  }
+}
+
+.pop-up {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding: 15px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 15px;
+  text-transform: capitalize;
+  right: 20px;
+  bottom: 10px;
+  border: 1px solid #766d75;
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  background-color: #4a0d42;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  .pop-up {
+    /*this is for Phone*/
+    font-size: 12px;
+  }
+}
+.pop-up.active-pop-up {
+  display: block;
+}
+
+i.fa-cookie-bite {
+  position: absolute;
+  opacity: 0.3;
+  font-size: 60px;
+  right: 50px;
+  top: 120px;
+  color: #dca329;
+}
+
+i.fa-pagelines {
+  position: absolute;
+  opacity: 0.3;
+  font-size: 60px;
+  right: 60px;
+  top: 200px;
+  color: #dca329;
+}
+
+.close-to-elements {
+  opacity: 1 !important;
+}
+
+i.decor {
+  position: absolute;
+  font-size: 40px;
+}
+@media (max-width: 767px) {
+  i.decor {
+    /*this is for Phone*/
+    font-size: 30px;
+  }
+}
+
+.waves {
+  position: relative;
+}
+
+.waves::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  background-image: linear-gradient(135deg, rgb(253, 248, 239) 25%, transparent 25%), linear-gradient(225deg, rgb(253, 248, 239) 25%, transparent 25%);
+  background-size: 40px 40px;
+}
+
+.curve {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  background: #F7ECD9;
+}
+
+.curve::before,
+.curve::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 54%;
+  height: 100%;
+  border-radius: 100% 50%;
+}
+
+.curve::before {
+  background-color: white;
+  transform: translate(85%, 60%);
+}
+
+.curve::after {
+  transform: translate(-4%, 40%);
+  background-color: #F7ECD9;
+}/*# sourceMappingURL=components.css.map */

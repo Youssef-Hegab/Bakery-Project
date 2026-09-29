@@ -1,0 +1,44 @@
+@use "../abstracts/variables" as *;
+// End Import 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    position: relative;
+    min-height: 500vh;
+    font-family: sans-serif;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+button {
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+a {
+    outline: none;
+    cursor: pointer;
+    color: $a-color;
+    text-decoration: none;
+    font-family: $body-font;
+    text-transform: capitalize;
+}

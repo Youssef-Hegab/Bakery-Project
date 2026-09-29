@@ -1,0 +1,139 @@
+@use "../../abstracts/mixins" as *;
+@use "../../abstracts/variables" as *;
+@use "../../components/componentElements/components" as *;
+// End Import 
+
+.head {
+    position: fixed;
+    top: 0;left: 0;
+    width: 100%;
+    z-index: 100;
+    background: $main-background-color;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(58, 16, 48, 0.08);
+
+    img {
+        width: 80px;
+    }
+
+    .header-container {
+        @include flex-between();
+        min-height: $min-height;
+
+        ul.nav-links {
+            z-index: 999;
+            gap: 40px;
+            @include flex-between(); 
+
+            li a {
+                font-size: 13px;
+                position: relative;
+                transition: $transition;
+
+                &:hover,
+                &.active-item {
+                    color: $main-color;
+                }
+
+                &::before {
+                    position: absolute;content: "";
+                    left: 0;bottom: -10px;
+                    height: 2px;width: 0;
+                    transition: $transition;
+                    background-color: $second-color;
+                }
+
+                &:hover::before,
+                &.active-item::before {
+                    width: 100%;
+                }  
+
+            }
+        
+            @include breakPoints(mobile){
+                    display: none;
+                    position: absolute;
+                    width: 100%;
+                    padding: 20px;
+                    top: $min-height;left: 0;
+                    flex-direction: column;
+                    background-color: #fff;
+                    border: 1px solid #eee; border-radius: 10px;
+                    &.showMenu {display: block;}
+                
+                li { 
+                    width: 100%;
+                    padding-left: 10px;
+                    &:not(:last-of-type){
+                        border-bottom: 1px solid #eee;
+                    }
+                    &:hover,&.on-section{
+                        border-color: $second-color;
+                    }
+                    a {
+                        padding: 15px 0;
+                        width: 100%;
+                        display: block;
+                        font-size: 15px;
+                        &::before {display: none;}
+                    }
+                }
+
+            }
+
+        }
+
+
+
+
+        
+        .nav-action {
+            gap: 20px;
+            @include flex-between();
+
+            i.fa-cart-shopping {
+                position: relative;
+                font-size: 16px;
+                cursor: pointer;
+                color: $main-color;
+                border-radius: 50%;
+                @include flex-center();
+                transition: $transition;
+                width: 50px;height: 50px;
+                span.shoping-value{
+                    position: absolute;content: "0";
+                    @include flex-center();
+                    right: -5px;top: 0px;
+                    width: 20px;height: 20px;
+                    border-radius: 50%;
+                    background-color: $second-color;
+                    font-size: 9px;font-weight: bolder;
+                }
+
+                &:hover {background-color: $light-yellow;}
+                
+            }
+
+            i.menu {
+                cursor: pointer;
+                display: none;
+                font-size: 25px;    
+                @include breakPoints(mobile){
+                    display: block;
+                }
+            }
+            a.btn {
+                @include breakPoints(mobile){
+                    display: none;
+                }
+            }
+        }
+
+    }
+
+}
+
+
+
+
+

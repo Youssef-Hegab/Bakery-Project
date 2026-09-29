@@ -1,0 +1,87 @@
+// Flex System
+@mixin flex-center (){
+    display: flex;
+    justify-content: center;align-items: center;
+}
+@mixin flex-between (){
+    display: flex;
+    justify-content: space-between;align-items: center;
+}
+@mixin flex-around(){
+    display: flex;
+    justify-content: space-around;align-items: center;
+}
+@mixin flex-start(){
+    display: flex;
+    justify-content:start;align-items: center;
+}
+
+// Grid System
+@mixin grid($size,$gap){
+    display: grid;gap: $gap;
+    grid-template-columns: repeat(auto-fit,minmax($size,1fr));
+}
+@mixin gridTwoElement($sizeOne ,$sizeTwo,$gapSize){
+    display: grid;
+    gap: $gapSize;
+    align-items: center;
+    grid-template-columns: $sizeOne $sizeTwo;
+}
+
+@mixin gridColumns($numOfColumns , $gapSize){
+    display: grid;
+    gap: $gapSize;
+    grid-template-columns: repeat($numOfColumns ,minmax(0,1fr));
+}
+// Responsive Breakpoints
+@mixin breakPoints($device){
+
+    @if $device == mobile{
+        @media (max-width:767px) {
+            /*this is for Phone*/
+            @content;
+        }
+    }
+    @if $device == tablet{
+        @media (max-width:991px) {
+            /*this is for tablet & Phone*/
+            @content;
+        }
+    }
+
+    @else if $device == laptop{
+        @media (min-width:768px )and (max-width:1199px) {
+            /*this is for Laptop*/
+            @content;
+        }
+    }
+
+    @else if $device == computer{
+        @media (min-width:1200px) {
+            /*this is for Computer*/
+            @content;
+        }
+    }
+    
+    
+}
+
+
+@mixin customBreakPoints($minSize,$maxSize){
+        @media (min-width:$minSize) and (max-width:$maxSize) {
+            /*this is for Phone*/
+            @content;
+        }
+}
+
+
+@mixin addGradientGround(){
+    @content;
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+}

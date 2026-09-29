@@ -1,0 +1,151 @@
+@use "../../abstracts/mixins" as *;
+@use "../../abstracts/variables" as *;
+@use "../../components/componentElements/components" as *;
+// End Import 
+
+.products {
+
+    position: relative;
+    padding-bottom: $padd-20 0;
+    // margin: $marg-30 0;
+    min-height: 800px;
+    background-color: $main-color;
+
+    .container {
+
+        padding-top: 50px;
+        .product-head {
+            gap: 60px;
+            margin-bottom: $marg-50;
+            @include flex-between();
+            @include breakPoints(mobile){
+                flex-direction: column;
+            }
+            .product-intro{
+                .section-info{
+                    color: white;
+                    font-size: 70px;
+                }
+            }
+            .product-info {
+                font-size: 14px;
+                line-height: 1.7;
+                max-width: 550px;
+                color: $light-white;
+                @include breakPoints(mobile){
+                    font-size: 14px;
+                }
+            }
+        }
+
+
+
+
+
+
+
+    }
+
+
+
+
+    .product-category{
+
+        // @include grid(150px,50px);
+        margin-top: 30px;
+        padding: 20px;
+        margin-inline: auto;
+        position: relative;
+        overflow: hidden;
+        width: 95%;height: 350px;
+        mask-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 1) 20%,
+            rgba(0, 0, 0, 1) 90%,
+            rgba(0, 0, 0, 0)
+        );
+
+        @include breakPoints(mobile){
+            mask-image: linear-gradient(
+                to right,
+                rgba(0, 0, 0, 0),
+                rgba(0, 0, 0, 1) 20%,
+                rgba(0, 0, 0, 1) 80%,
+                rgba(0, 0, 0, 0)
+            );
+        }
+        .box {
+            display: flex;gap: 20px;
+            align-items: center;
+            flex-direction: column;
+            position: absolute;
+            margin-top: 20px;
+            height: 300px;width: 300px;
+            left:  max( calc(300px * 6),100%);
+            animation: scroll infinite linear 50s;
+            
+            &.product-1 {
+            animation-delay: calc(50s / 6 * (6 - 1) * -1);
+            }
+            &.product-2 {
+            animation-delay: calc(50s / 6 * (6 - 2) * -1);
+            }
+            &.product-3 {
+            animation-delay: calc(50s / 6 * (6 - 3) * -1);
+            }
+            &.product-4 {
+            animation-delay: calc(50s / 6 * (6 - 4) * -1);
+            }
+            &.product-5 {
+            animation-delay: calc(50s / 6 * (6 - 5) * -1);
+            }
+            &.product-6 {
+            animation-delay: calc(50s / 6 * (6 - 6) * -1);
+            }
+    
+            @include breakPoints(mobile){
+                height: 200px;width: 200px;
+                left:  max( calc(200px * 6),100%);
+
+            }
+
+            div{
+                padding: 5px;
+                border-radius: 50%;
+                transition: $transition;
+                width: 100%;height: 80%;
+                border: 1px solid $second-color;
+
+                img{
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 50%;
+                }
+
+            }
+            h3 {
+                color: $white;
+                text-transform: capitalize;
+                @include breakPoints(mobile){
+                    font-size: 15px;
+                }
+            }
+            &:hover div {
+                transform: translateY(-8px);
+            }
+        }
+        &:hover .box { animation-play-state: paused;}
+    }
+}
+
+
+
+
+
+@keyframes scroll {
+    to {
+        left: -300px;
+    }
+}
+

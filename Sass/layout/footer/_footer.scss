@@ -1,0 +1,161 @@
+@use "../../abstracts/mixins" as *;
+@use "../../abstracts/variables" as *;
+@use "../../components/componentElements/components" as *;
+
+footer {
+    position: relative;
+    background-color: $main-color;
+    .container{
+        .footer-container{
+            display: flex;gap:30px;
+            padding-top: 50px;
+
+            >div{
+                width: 50%;
+            }
+
+            .about-us{
+                a{
+                    cursor: pointer;
+                    letter-spacing: 3px;
+                    color: $second-color;
+                    font-family: $section-title;
+                    font-size: 35px;font-weight: 700;
+                }
+                p{
+                    color: #aaa;
+                    font-size: 13px;
+                    max-width: 450px;
+                    line-height: 1.5;
+                    margin: 10px 0 20px;
+                }
+
+                .social-media{
+                    gap: 7px;
+                    display: flex;
+                    align-items: center;
+                    i{
+                        color: #aaa;
+                        font-size: 15px;
+                        cursor: pointer;
+                        border-radius: 50%;
+                        transition: $speed--5;
+                        @include flex-center();
+                        width: 30px;height: 30px;
+
+                    }
+                    i.fa-whatsapp:hover{color: $light-green-color;}
+                    i.fa-instagram:hover{color: $light-special-color;}
+                    i.fa-plate-wheat:hover{color: $second-color;}
+                    i.fa-square-facebook:hover{color: $light-blue-color;}
+
+                }
+            }
+
+
+
+
+
+
+
+            .all-link{
+                display: flex;
+                justify-content: space-between;
+                >div {
+                    h3{
+                        color: white;                        
+                        margin-bottom: 15px;
+                        text-transform: capitalize;
+                        font-size: 22px;font-weight: 700;font-family: serif;
+                    }
+                }
+
+                .our-products{
+
+                    ul {
+                        li{
+                            margin-bottom: 10px;
+                            a{
+                                color: #888;
+                                font-size: 11px;
+                                transition: $speed--5;
+                                letter-spacing: 0.8px;
+                                border-bottom:1px solid transparent;
+                                &:hover{
+                                    color: $second-color;
+                                    border-bottom-color: $second-color;
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+
+                .contact-info{
+                    p {
+                        color: #aaa;
+                        font-size: 15px;
+                        margin-bottom: 15px;
+                    }
+                }
+
+            }
+        
+            @include breakPoints(mobile){
+                flex-direction: column;
+                >div{
+                    width: 100%;
+                }
+                
+            }
+        }
+
+
+        .copy-right{
+            @include flex-between();
+            border-top: 1px solid #888;
+            margin-top: 20px ;padding: 15px 0;
+            @include breakPoints(mobile){
+                gap: 10px;
+                flex-direction: column;
+            }
+            p{
+                color: #aaa;
+                font-size: 14px;
+            }
+            p:first-of-type span{
+                margin:  0 5px ;
+                font-size: 17px;
+                color: $second-color;
+                font-family: $section-title;
+            }
+            
+        }
+
+    }
+
+
+
+
+        // .spikes {
+        // position: relative;
+        // background: #2c3e50;
+        // height: 50vh;
+
+        // &::after {
+        //     content: '';
+        //     position: absolute;
+        //     right: 0;
+        //     left: -23%;
+        //     top: 100%;
+        //     z-index: 10;
+        //     display: block;
+        //     height: 45px;
+        //     background-size: 45px 100%;
+        //     background-image: linear-gradient(135deg, #2c3e50 25%, transparent 25%), linear-gradient(225deg, #2c3e50 25%, transparent 25%);
+        //     background-position: 0 0;
+        // }
+        // }
+
+}

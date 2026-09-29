@@ -1,0 +1,825 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bakery</title>
+
+    <link rel="stylesheet" href="./Sass/Main Style/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Allura&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Caacupe+One&family=Lilita+One&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Black+Ops+One&family=Caacupe+One&family=Lilita+One&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Black+Ops+One&family=Caacupe+One&family=Lilita+One&family=Permanent+Marker&display=swap"
+    />
+  </head>
+
+  <body>
+    <!-- Start Up button -->
+    <i class="fa-solid fa-arrow-turn-up up-button"></i>
+    <!-- End Up button -->
+
+    <!-- Start Popup clicked -->
+    <div class="pop-up"></div>
+    <!-- End Popup clicked -->
+
+    <!-- Start Cart Products  -->
+    <div class="cart-overlay">
+      <div class="cart-drawer">
+        <!-- Start Close xmark -->
+        <i class="fa-solid fa-xmark"></i>
+        <!-- End Close xmark -->
+
+        <!-- Start Cart Info  -->
+        <div class="cart-info">
+          <div class="cart-head">
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <div class="cart-head-info">
+              <h2 class="cart-head-title">Your Cart</h2>
+              <p class="cart-head-items-count"><span>0</span> items</p>
+            </div>
+          </div>
+
+          <div class="cart-body">
+            <div class="empty-cart">
+              <p>Your cart is empty</p>
+              <img src="./images/emptyCart2.jpg" alt="empty Cart" />
+              <p>Fill me up</p>
+            </div>
+          </div>
+        </div>
+        <!-- End Cart Info  -->
+
+        <!-- Start Cart summary  -->
+        <div class="cart-summary">
+          <img src="./images/good things.jpeg" alt="good things" />
+
+          <div class="cart-summary-row">
+            <div class="label">
+              subtotal (<span class="cart-summary-num">0</span> items)
+            </div>
+
+            <div class="subtotal value">$<span>0.00</span></div>
+          </div>
+
+          <div class="cart-summary-row">
+            <div class="label">delivery</div>
+            <div class="delivery value">$<span>0.00</span></div>
+          </div>
+
+          <div class="cart-summart-total">
+            <div class="label">total</div>
+            <div class="value">$<span>0.00</span></div>
+          </div>
+
+          <button class="btn cart-pay-btn" type="button">
+            <i class="fa-solid fa-credit-card"></i>
+            <span>Pay Now</span>
+          </button>
+        </div>
+        <!-- End Cart summary  -->
+      </div>
+    </div>
+    <!-- End Cart Products  -->
+
+    <!-- Start Head -->
+    <div class="head">
+      <div class="container header-container">
+        <img class="logo" src="./images/Bakery logo.png" alt="Bakery logo" />
+
+        <ul class="nav-links">
+          <li><a href="#home" class="active-item">home</a></li>
+          <li><a href="#products">products</a></li>
+          <li><a href="#story">about us</a></li>
+          <li><a href="#shop">shop</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+
+        <div class="nav-action">
+          <i class="fa-solid fa-cart-shopping">
+            <span class="shoping-value"></span>
+          </i>
+          <a href="#contact" class="btn book-table">Book a Table</a>
+          <i class="fa-solid fa-bars menu"></i>
+        </div>
+      </div>
+    </div>
+    <!-- End Head -->
+
+    <!-- Start hero -->
+    <div class="hero" id="home">
+      <!-- Start Hero Container -->
+      <div class="container hero-container">
+        <!-- Start Hero info -->
+        <div class="hero-info">
+          <h2 class="section-title">Freshly Baked</h2>
+          <div class="section-info">Goodness,</div>
+          <div class="section-info">Every Day.</div>
+          <p class="hero-text">
+            From warm breads to delightful pastries, made with love and the
+            finest ingredients.
+          </p>
+
+          <div class="hero-links">
+            <a href="#shop" class="btn">order now</a>
+
+            <div class="hero-btns">
+              <span class="video-icon"><i class="fa-solid fa-play"></i></span>
+              <a href="#" class="story-btn">Watch Our Story</a>
+            </div>
+          </div>
+        </div>
+        <!-- End Hero info -->
+
+        <!-- Start Hero img -->
+        <div class="hero-img">
+          <img src="./images/cake-intro.avif" alt="cake" />
+          <div class="with-love">
+            made<br />
+            with love <i class="fa-regular fa-heart"></i>
+          </div>
+        </div>
+        <!-- End Hero img -->
+      </div>
+      <!-- End Hero Container -->
+
+      <!-- Start Hero Stat -->
+      <div class="container hero-stats">
+        <div class="box">
+          <i class="fa-solid fa-briefcase"></i>
+          <div class="stat-info">
+            <h3>200+</h3>
+            <p>daily orders</p>
+          </div>
+        </div>
+
+        <div class="box">
+          <i class="fa-solid fa-cookie"></i>
+          <div class="stat-info">
+            <h3>50+</h3>
+            <p>Delicious Items</p>
+          </div>
+        </div>
+
+        <div class="box">
+          <i class="fa-solid fa-leaf"></i>
+          <div class="stat-info">
+            <h3>100%</h3>
+            <p>Fresh & Natural</p>
+          </div>
+        </div>
+      </div>
+      <!--  End Hero Stat -->
+    </div>
+    <!-- End hero -->
+
+    <!-- Start Products -->
+    <div class="products" id="products">
+      <div class="waves"></div>
+
+      <i class="fa-solid fa-cookie-bite"></i>
+      <div class="container">
+        <div class="product-head">
+          <div class="product-intro">
+            <h2 class="section-title">Explore</h2>
+            <div class="section-info">Our Delicious</div>
+            <div class="section-info">Creations</div>
+          </div>
+          <p class="product-info">
+            Since our first loaf came out of the oven, we've been dedicated to
+            bringing you fresh, wholesome, and delicious baked goods.
+          </p>
+        </div>
+      </div>
+
+      <!-- Start product-category -->
+      <div class="product-category">
+        <div class="box product-1" data-category="Cookies">
+          <div>
+            <img src="./images/Cookies.avif" alt="Cookies" />
+          </div>
+          <h3>Cookies</h3>
+        </div>
+
+        <div class="box product-2" data-category="Breads">
+          <div>
+            <img src="./images/Breads.avif" alt="Breads" />
+          </div>
+          <h3>Breads</h3>
+        </div>
+
+        <div class="box product-3" data-category="Cupcakes">
+          <div>
+            <img src="./images/Cupcakes.avif" alt="Cupcakes" />
+          </div>
+          <h3>Cupcakes</h3>
+        </div>
+
+        <div class="box product-4" data-category="Doughnuts">
+          <div>
+            <img src="./images/Doughnuts.avif" alt="Doughnuts" />
+          </div>
+          <h3>Doughnuts</h3>
+        </div>
+
+        <div class="box product-5" data-category="Pastries">
+          <div>
+            <img src="./images/pastries.avif" alt="pastries" />
+          </div>
+          <h3>pastries</h3>
+        </div>
+
+        <div class="box product-6">
+          <div>
+            <img src="./images/cupcakes.jpg" alt="cupcakes" />
+          </div>
+          <h3>cupcakes</h3>
+        </div>
+      </div>
+      <!-- End product-category -->
+    </div>
+    <!-- End Products -->
+
+    <!-- Start Story  -->
+    <div class="story" id="story">
+      <div class="container story-container">
+        <img src="./images/flower.png" alt="flower" class="flower" />
+        <i class="fa-solid fa-cookie-bite"></i>
+
+        <div class="story-info">
+          <div class="section-info">Our Story,</div>
+          <h2 class="section-title">Baked</h2>
+          <div class="section-info">with Love</div>
+          <p>
+            Since our first loaf came out of the oven, we've been dedicated to
+            bringing you fresh, wholesome, and delicious baked goods. Every
+            recipe is made from scratch using premium ingredients and lots of
+            love.
+          </p>
+
+          <div class="story-features">
+            <div class="box">
+              <i class="fa-solid fa-cookie"></i>
+              <h3>Premium <br />Ingredients</h3>
+            </div>
+
+            <div class="box">
+              <i class="fa-solid fa-heart"></i>
+              <h3>Made <br />Fresh Daily</h3>
+            </div>
+
+            <div class="box">
+              <i class="fa-solid fa-lightbulb"></i>
+              <h3>
+                Crafted <br />
+                with Passion
+              </h3>
+            </div>
+          </div>
+
+          <a href="#passion" class="btn">Learn More About Us</a>
+        </div>
+
+        <div class="story-img">
+          <img src="./images/blueCake.jpg" />
+
+          <div class="small-img">
+            <img src="./images/pastries.avif" alt="pastries" />
+          </div>
+          <div class="small-img">
+            <img src="./images/Doughnuts.avif" alt="Doughnuts" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Story  -->
+
+    <!-- Start Passion  -->
+    <div class="passion" id="passion">
+      <div class="container">
+        <div class="passion-info">
+          <div class="section-info">Baking with</div>
+          <div class="section-info">Passion & Purpose</div>
+          <p>
+            Every item that leaves our kitchen is shaped by hand, tested by
+            taste, and finished with care — because good baking is equal parts
+            craft and heart.
+          </p>
+
+          <a href="#contact" class="btn">Meet Our Bakers</a>
+        </div>
+
+        <div class="passion-img">
+          <img src="./images/baker.jpeg" alt="Baker" />
+        </div>
+      </div>
+
+      <div class="curve"></div>
+    </div>
+    <!-- End Passion  -->
+
+    <!-- Start Deals -->
+    <div class="deals">
+      <div class="container">
+        <i class="fa-solid fa-cake-candles decor"></i>
+        <i class="fa-solid fa-gift decor"></i>
+        <i class="fa-solid fa-candy-cane decor"></i>
+        <i class="fa-solid fa-tree decor"></i>
+        <i class="fa-solid fa-percent decor"></i>
+        <i class="fa-solid fa-champagne-glasses decor"></i>
+        <i class="fa-solid fa-snowman decor"></i>
+        <i class="fa-solid fa-cookie decor"></i>
+
+        <div class="deals-info">
+          <div class="section-info">Sweet Deals<br />Fresh Savings!</div>
+
+          <p class="offer">10% off all cakes</p>
+
+          <a href="#shop" class="btn">Shop Now</a>
+        </div>
+
+        <img src="./images/manBaker.png" alt="Man Baker" />
+      </div>
+    </div>
+    <!-- End Deals -->
+
+    <!-- Start contact -->
+    <div class="contact" id="contact">
+      <div class="container">
+        <div class="contact-info">
+          <h2 class="section-title">Stay Updated with</h2>
+          <h2 class="section-info">Sweet News!</h2>
+          <p>
+            Get first access to seasonal menus, baking tips, and special offers.
+          </p>
+          <form action="">
+            <input type="text" placeholder="Enter your email" class="email" />
+            <button class="subscribe btn">Subscribe</button>
+          </form>
+          <p class="alert-email-message">
+            <i class="fa-solid fa-circle-exclamation"></i>Please enter a valid
+            email, e.g. person@gmail.com
+          </p>
+
+          <p class="respone">
+            Thanks — we'll send sweet updates to <span></span>
+          </p>
+        </div>
+
+        <img src="./images/contectTeam.png" alt="contact Team" />
+      </div>
+    </div>
+    <!-- End contact -->
+
+    <!-- Start Testimonial -->
+    <div class="testimonial">
+      <div class="container">
+        <div class="section-info">What Our Customers</div>
+        <h2 class="section-title">say</h2>
+
+        <div class="customer-container">
+          <div class="switcher">
+            <i class="fa-solid fa-angle-left"></i>
+            <i class="fa-solid fa-angle-right"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Testimonial -->
+
+    <!-- Start Shop -->
+    <div class="shop" id="shop">
+      <div class="container">
+        <div class="section-title">shop by category</div>
+
+        <div class="category-section">
+          <div class="product-box" data-category="cakes">
+            <div class="category-img">
+              <img src="./images/category imgs/Cakes.png" alt="Cakes" />
+            </div>
+            <p class="category-name">cakes</p>
+          </div>
+
+          <div class="product-box" data-category="cupcakes">
+            <div class="category-img">
+              <img src="./images/category imgs/Cupcakes.png" alt="Cupcakes" />
+            </div>
+            <p class="category-name">cupcakes</p>
+          </div>
+
+          <div class="product-box" data-category="breads">
+            <div class="category-img">
+              <img src="./images/category imgs/Breads.png" alt="Breads" />
+            </div>
+            <p class="category-name">breads</p>
+          </div>
+
+          <div class="product-box" data-category="pastries">
+            <div class="category-img">
+              <img src="./images/category imgs/Pastries.png" alt="Pastries" />
+            </div>
+            <p class="category-name">pastries</p>
+          </div>
+
+          <div class="product-box" data-category="cookies">
+            <div class="category-img">
+              <img src="./images/category imgs/Cookies.png" alt="Cookies" />
+            </div>
+            <p class="category-name">cookies</p>
+          </div>
+
+          <div class="product-box" data-category="custom">
+            <div class="category-img">
+              <img
+                src="./images/category imgs/Custom Cakes.png"
+                alt="Custom Cakes"
+              />
+            </div>
+            <p class="category-name">custom cakes</p>
+          </div>
+
+          <div class="product-box" data-category="gift">
+            <div class="category-img">
+              <img
+                src="./images/category imgs/Gift Hampers.png"
+                alt="Gift Hampers"
+              />
+            </div>
+            <p class="category-name">gift hampers</p>
+          </div>
+
+          <div class="product-box select-product" data-category="all">
+            <div class="category-img">
+              <img src="./images/category imgs/all sweet.png" alt="All Sweet" />
+            </div>
+            <p class="category-name">all</p>
+          </div>
+        </div>
+        <!-- End of Category -->
+
+        <div class="item-container">
+          <div class="item-head">
+            <h2>best sellers</h2>
+            <button class="view all-view">
+              <span>view all</span><i class="fa-solid fa-caret-down"></i>
+            </button>
+          </div>
+
+          <div class="item-content">
+            <div
+              class="item all best show-item"
+              data-category="cakes"
+              data-product-id="cakes-001"
+            >
+              <div class="item-img">
+                <img src="./images/cake-intro.avif" alt="Cake" />
+              </div>
+
+              <div class="item-info">
+                <p class="txt">Belgian Chocolate Cake</p>
+                <h3 class="price">$<span>10.00</span></h3>
+                <div class="rating">
+                  <span class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </span>
+
+                  <span class="rating-num">(1,245)</span>
+                </div>
+              </div>
+
+              <button class="add-to-cart">add to cart</button>
+            </div>
+
+            <div
+              class="item all best show-item"
+              data-category="cupcakes"
+              data-product-id="cupcakes-001"
+            >
+              <div class="item-img">
+                <img src="./images/cupcakes.jpg" alt="Cupcakes" />
+              </div>
+              <div class="item-info">
+                <p class="txt">Red Velvet Cupcakes</p>
+                <h3 class="price">$<span>25.00</span></h3>
+                <div class="rating">
+                  <span class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </span>
+
+                  <span class="rating-num">(982)</span>
+                </div>
+              </div>
+
+              <button class="add-to-cart">add to cart</button>
+            </div>
+
+            <div
+              class="item all best show-item"
+              data-category="breads"
+              data-product-id="breads-001"
+            >
+              <div class="item-img">
+                <img src="./images/Breads.avif" alt="Breads" />
+              </div>
+              <div class="item-info">
+                <p class="txt">Sourdough Bread</p>
+                <h3 class="price">$<span>130.00</span></h3>
+                <div class="rating">
+                  <span class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </span>
+
+                  <span class="rating-num">(876)</span>
+                </div>
+              </div>
+
+              <button class="add-to-cart">add to cart</button>
+            </div>
+
+            <div
+              class="item all best show-item"
+              data-category="pastries"
+              data-product-id="pastries-001"
+            >
+              <div class="item-img">
+                <img src="./images/pastries.avif" alt="Pastries" />
+              </div>
+              <div class="item-info">
+                <p class="txt">Butter Croissants (4 pcs)</p>
+                <h3 class="price">$<span>40.00</span></h3>
+                <div class="rating">
+                  <span class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </span>
+
+                  <span class="rating-num">(754)</span>
+                </div>
+              </div>
+
+              <button class="add-to-cart">add to cart</button>
+            </div>
+
+            <div
+              class="item all best show-item"
+              data-category="cookies"
+              data-product-id="cookies-001"
+            >
+              <div class="item-img">
+                <img src="./images/Cookies.avif" alt="Cookies" />
+              </div>
+              <div class="item-info">
+                <p class="txt">Chocolate Chip Cookies</p>
+                <h3 class="price">$<span>50.00</span></h3>
+                <div class="rating">
+                  <span class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </span>
+
+                  <span class="rating-num">(1,105)</span>
+                </div>
+              </div>
+
+              <button class="add-to-cart">add to cart</button>
+            </div>
+
+            <div
+              class="item all best show-item"
+              data-category="custom"
+              data-product-id="custom-001"
+            >
+              <div class="item-img">
+                <img src="./images/custom cake.avif" alt="Custom Cakes" />
+              </div>
+              <div class="item-info">
+                <p class="txt">Custom Birthday Cake</p>
+                <h3 class="price">$<span>60.00</span></h3>
+                <div class="rating">
+                  <span class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </span>
+
+                  <span class="rating-num">(421)</span>
+                </div>
+              </div>
+
+              <button class="add-to-cart">add to cart</button>
+            </div>
+
+            <div
+              class="item all best show-item"
+              data-category="gift"
+              data-product-id="gift-001"
+            >
+              <div class="item-img">
+                <img src="./images/gift.avif" alt="Gift Hampers" />
+              </div>
+              <div class="item-info">
+                <p class="txt">Luxury Gift Hamper</p>
+                <h3 class="price">$<span>70.00</span></h3>
+                <div class="rating">
+                  <span class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </span>
+
+                  <span class="rating-num">(318)</span>
+                </div>
+              </div>
+
+              <button class="add-to-cart">add to cart</button>
+            </div>
+
+            <div
+              class="item all"
+              data-category="gift"
+              data-product-id="gift-002"
+            >
+              <div class="item-img">
+                <img src="./images/gift2.jpg" alt="Gift " />
+              </div>
+              <div class="item-info">
+                <p class="txt">Luxury Gift Hamper</p>
+                <h3 class="price">$<span>80.00</span></h3>
+                <div class="rating">
+                  <span class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </span>
+
+                  <span class="rating-num">(518)</span>
+                </div>
+              </div>
+
+              <button class="add-to-cart">add to cart</button>
+            </div>
+
+            <div
+              class="item all"
+              data-category="cupcakes"
+              data-product-id="cupcakes-002"
+            >
+              <div class="item-img">
+                <img src="./images/Cupcakes.avif" alt="Cupcakes" />
+              </div>
+              <div class="item-info">
+                <p class="txt">blue Velvet Cupcakes</p>
+                <h3 class="price">$<span>90.00</span></h3>
+                <div class="rating">
+                  <span class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </span>
+
+                  <span class="rating-num">(764)</span>
+                </div>
+              </div>
+
+              <button class="add-to-cart">add to cart</button>
+            </div>
+
+            <div
+              class="item all"
+              data-category="cakes"
+              data-product-id="cakes-002"
+            >
+              <div class="item-img">
+                <img src="./images/Baked3.jpg" alt="Cake" />
+              </div>
+              <div class="item-info">
+                <p class="txt">Red Velvet Cake</p>
+                <h3 class="price">$<span>60.00</span></h3>
+                <div class="rating">
+                  <span class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </span>
+
+                  <span class="rating-num">(1,445)</span>
+                </div>
+              </div>
+
+              <button class="add-to-cart">add to cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Shop -->
+
+    <!-- Start Footer -->
+    <footer>
+      <div class="waves"></div>
+      <div class="container">
+        <div class="footer-container">
+          <div class="about-us">
+            <a href="#home">baked</a>
+
+            <p>
+              Freshly baked goodness, every day — warm breads, delicate pastries
+              and celebration cakes made with love.
+            </p>
+
+            <div class="social-media">
+              <i class="fa-brands fa-square-facebook"></i>
+              <i class="fa-brands fa-whatsapp"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-solid fa-plate-wheat"></i>
+            </div>
+          </div>
+
+          <div class="all-link">
+            <div class="our-products">
+              <h3>our products</h3>
+
+              <ul>
+                <li>
+                  <a href="#products">Breads</a>
+                </li>
+
+                <li>
+                  <a href="#products">Doughnuts</a>
+                </li>
+
+                <li>
+                  <a href="#products">Cookies</a>
+                </li>
+
+                <li>
+                  <a href="#products">Cupcakes</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="contact-info">
+              <h3>Contact Info</h3>
+              <p class="phone-number">+20 1123 456 789</p>
+              <p class="email-address">person@gmail.com</p>
+              <p class="market-address">12 Baker Street, Cake City</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="copy-right">
+          <p>&copy <span>Baked</span> All rights reserved.</p>
+          <p>Privacy Policy · Terms of Service</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Start Footer -->
+
+    <script src="./main.js"></script>
+  </body>
+</html>

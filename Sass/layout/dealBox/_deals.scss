@@ -1,0 +1,119 @@
+@use "../../abstracts/mixins" as *;
+@use "../../abstracts/variables" as *;
+@use "../../components/componentElements/components" as *;
+// End Import 
+.deals{
+    z-index: 1;
+    position: relative;
+    padding-top: 170px;
+    padding-bottom: 170px;
+
+    .container{
+        // opacity: 0;
+        transition: 3s;
+        position: relative;
+        @include gridTwoElement(1fr , 1fr,40px);
+        @include breakPoints(tablet){
+            grid-template-columns: 1fr;
+        }
+        border-radius: 30px;
+        background:linear-gradient(to right ,#F6C9C0, #F6C9C0 50% );
+        box-shadow: $shadow-md;
+
+        .deals-info{
+
+            padding: $padd-45;
+            .section-info{
+                font-size: 60px;
+                line-height: 1.3;
+                color: $main-color;
+                @include breakPoints(mobile){
+                    font-size: 40px;
+                }
+            }
+            p.offer{
+                margin: $marg-25 0;
+                padding: $padd-10 $padd-15;
+                width: fit-content;
+                border-radius: 15px;
+                text-transform: capitalize;
+                font-size: 18px;font-weight: 600;
+                background-color: $cart-hover ;color: $main-color;
+            }
+        }
+
+
+        i.decor{
+            opacity: 0.2;
+            &.fa-candy-cane{
+                top: 50%;left: 50%;
+                color: $light-red-color;
+                transform: translate(-50%,-50%)   rotate(-20deg);
+            }
+            &.fa-cake-candles {
+                left:10%;top:5%;
+                color: $light-green-color;
+                transform:rotate(-70deg);
+            }
+            &.fa-gift{
+                bottom: 5%;left: 5%;
+                color: $light-blue-color;
+                transform: rotate(-8deg);
+            }
+            &.fa-tree {
+                bottom: 10%;left: 50%;
+                color:$light-red-color;
+                transform: translateX(-50%) rotate(45deg);
+            }
+            &.fa-percent{
+                top: 15%;left: 50%;
+                color:$light-special-color;
+                transform: translateX(-50%) rotate(-50deg);
+            }
+            &.fa-champagne-glasses{
+                right: 20%;bottom: 5%;
+                color:$light-special-color;
+                transform: rotate(-36deg);
+            }
+            &.fa-snowman{
+                bottom: 30%;left: 33%;
+                color:  $light-blue-color;
+                transform: rotate(-29deg);
+            }
+            &.fa-cookie{
+                bottom: 10%;left: 22%;
+                color:$light-green-color;
+            }
+            @include breakPoints(mobile){
+                opacity: 0.2;
+                &.fa-candy-cane{
+                    top: 50%;left: 50%;
+                }
+                &.fa-cake-candles {
+                    top: 2%;left: 10%;
+                }
+                &.fa-gift{
+                    bottom: 5%;left: 5%;
+                }
+                &.fa-tree {
+                    bottom: 94%;left: 85%;
+                }
+                &.fa-percent{
+                    top: 30%;left: 80%;
+                }
+                &.fa-champagne-glasses{
+                    bottom: 55%;right: 6%;
+                }
+                &.fa-snowman{
+                    bottom: 40%;left: 5%;
+                }
+                &.fa-cookie{
+                    bottom: 3%;left: 80%;
+                }
+            }
+
+        }
+
+    }
+}
+

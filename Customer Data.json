@@ -1,0 +1,26 @@
+[
+    {
+        "text": "The freshest pastries I've ever had. Everything tastes homemade, the service is lovely, and the cakes are absolutely beautiful.",
+        "image": "./images/person2.png",
+        "name": "Pedri J.",
+        "role": "Regular Customer"
+    },
+    {
+        "text": "Every visit feels like the first bite of something new — the sourdough alone is worth the trip.",
+        "image": "./images/person3.png",
+        "name": "Amelia M.",
+        "role": "Loyal Customer"
+    },
+    {
+        "text": "You can taste the difference real ingredients make. My kids ask for cupcakes by name now.",
+        "image": "./images/person1.png",
+        "name": "Ramy S.",
+        "role": "Happy Customer"
+    },
+    {
+        "text": "The croissants are incredible, and the smell of freshly baked bread makes every visit special. I always leave with something delicious.",
+        "image": "./images/person4.png",
+        "name": "Daniel K.",
+        "role": "Happy Customer"
+    }
+]
